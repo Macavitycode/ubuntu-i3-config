@@ -49,4 +49,5 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
 )
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=false
 source /opt/ros/melodic/setup.zsh
-source ~/projects/eyantra/catkin_ws/devel/setup.zsh
+source ~/projects/eyantra-ros/catkin_ws/devel/setup.zsh
+# source ~/catkin_ws/devel/setup.zsh

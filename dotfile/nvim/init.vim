@@ -33,6 +33,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'itchyny/lightline.vim'        " Status line plugin
     Plug 'crusoexia/vim-monokai'        " Monokai colorshceme
     Plug 'patstockwell/vim-monokai-tasty' " Monokai tasty
+    " Plug 'sickill/vim-monokai'
 
     Plug 'MaxMEllon/vim-jsx-pretty'     " JS highlighting
     Plug 'pangloss/vim-javascript'      " JS highlighting
@@ -71,14 +72,22 @@ autocmd FileType html,css EmmetInstall
 
 source $HOME/.config/nvim/plug-config/coc.vim
 
+let g:vim_monokai_tasty_italic = 1
+
+" let g:lightline = {
+"       \ 'colorscheme': 'monokai_tasty',
+"       \ }
+
 " Vim settings
 "-----------------------------------------------------------------------------
 
 syntax on                               " For syntax highlighting
-" colorscheme vim-monokai_tasty                     " Set colorscheme from here
-colorscheme vim-monokai-tasty
+
+colorscheme monokai                   " Set colorscheme from here
+" colorscheme vim-monokai-tasty
+
 set termguicolors                       " Actual bright color support
-" set t_Co=256                          " Support 256 colours in terminal.
+set t_Co=256                            " Support 256 colours in terminal.
                                         " No comment in the following line (?)
 
 hi Normal guibg=NONE ctermbg=NONE       

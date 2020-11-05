@@ -17,7 +17,7 @@ font pango:monospace 8
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 default_border pixel 1
-# default_floating_border normal
+default_floating_border normal
 
 # Hide borders
 hide_edge_borders none
@@ -99,7 +99,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+# bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -163,7 +163,7 @@ mode "$mode_system" {
     bindsym e exec --no-startup-id i3-msg exit
     bindsym h exec --no-startup-id i3exit hibernate, mode "default"
     bindsym r exec --no-startup-id i3exit reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+    bindsym Shift+s exec --no-startup-id shutdown now
 
     # exit system mode: "Enter" or "Escape"
     bindsym Return mode "default"
@@ -266,3 +266,8 @@ exec_always --no-startup-id compton -f -b &
 
 bindsym $mod+b exec "firefox --new-window --private-window"
 bindsym $mod+Shift+b exec "firefox --new-window"
+
+# Screenshot of region
+# bindsym --release $mod+Shift+s exec "~/.config/i3/scripts/ss.sh -s /dev/null"
+# bindsym --release $mod+Shift+Control+s exec "~/.config/i3/scripts/ss.sh -s ~/scrot/"
+bindsym --release $mod+Shift+s exec "~/.config/i3/scripts/ss.sh -s ~/scrot/"
