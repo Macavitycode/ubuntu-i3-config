@@ -22,3 +22,14 @@ Random tidbits I found important kept here
 `comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial
 -status.gz | sed -n 's/^Package: //p' | sort -u)`
 
+### To use gnome terminal config
+
+To save a config:
+`dconf dump /org/gnome/terminal/ > gnome_terminal_settings_backup.txt`
+
+To reset a config:
+`dconf reset -f /org/gnome/terminal/`
+
+To load in a saved config:
+`dconf load /org/gnome/terminal/ < dotfile/gnome_terminal_settings_backup.txt`
+
