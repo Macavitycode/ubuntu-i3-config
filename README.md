@@ -33,7 +33,7 @@ To reset a config:
 To load in a saved config:
 `dconf load /org/gnome/terminal/ < dotfile/gnome_terminal_settings_backup.txt`
 
-# Random screen flickering on nvidia GPUs
+### Random screen flickering on nvidia GPUs
 
 I noticed flickering ocationally while scrolling always in a given area.
 This fixed the problem:
