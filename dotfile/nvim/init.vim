@@ -34,11 +34,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'crusoexia/vim-monokai'        " Monokai colorshceme
     Plug 'patstockwell/vim-monokai-tasty' " Monokai tasty
     " Plug 'sickill/vim-monokai'
+    
+    " Plug 'taketwo/vim-ros'            " Doesn't work :'( 
 
     Plug 'MaxMEllon/vim-jsx-pretty'     " JS highlighting
     Plug 'pangloss/vim-javascript'      " JS highlighting
     Plug 'jiangmiao/auto-pairs'         " Gives automatic bracket pairs
-    
+
     Plug 'prettier/vim-prettier', {'do': 'npm install',
     \ 'for': ['javascript', 'typescript', 'css', 'scss', 'json',
     \ 'markdown', 'yaml', 'html']}
@@ -119,6 +121,7 @@ set incsearch                           " Enables incremental search
 set hlsearch                            " Enables highlights for searches
 
 set path+=**                            " Allows vim to look through files
+set clipboard+=unnamedplus
 
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
@@ -199,3 +202,10 @@ nnoremap <esc><esc> :let @/=""<CR>
 " command Wq wq
 " command W w
 " command Q q
+" Auto Commands
+" ----------------------------------------------------------------------------
+
+" This sets all tab related stuff to 2 for xml files
+autocmd FileType xml setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+
+
